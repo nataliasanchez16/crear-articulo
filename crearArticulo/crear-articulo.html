@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title #inicio>Articulos</title>
+  </head>
+  <body>
+    <h2>Titulo</h2>
+    <form action="/title" method="GET">
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Ingresa el titulo del articulo"
+        required
+      />
+    </form>
+    <h2>Contenido</h2>
+    <form action="/content" method="GET">
+      <textarea
+        id="content"
+        name="content"
+        placeholder="Ingresa el contenido del articulo"
+        required
+      ></textarea>
+    </form>
