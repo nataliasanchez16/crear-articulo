@@ -5,33 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="styles.css" />
-
     <title #inicio>Articulos</title>
   </head>
   <body>
-    <h2>Titulo</h2>
-    <form action="/title" method="GET">
-      <input
-        type="text"
-        id="title"
-        name="title"
-        placeholder="Ingresa el titulo del articulo"
-        required
-      />
-    </form>
-    <h2>Imagen</h2>
+    <div>
+      Formulario de Artículos
+      <h2>Titulo</h2>
+      <form action="/title" method="GET">
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Ingresa el titulo del articulo"
+          required
+        />
+      </form>
+      <h2>Imagen</h2>
 
-    <label for="imagen"></label>
-    <input type="file" id="imagen" name="imagen" accept="image/*" />
+      <label for="imagen"></label>
+      <input type="file" id="imagen" name="imagen" accept="image/*" />
 
-    <h2>Contenido</h2>
-    <form action="/content" method="GET">
-      <textarea
-        id="content"
-        name="content"
-        placeholder="Ingresa el contenido del articulo"
-        required
-      ></textarea>
-    </form>
+      <h2>Contenido</h2>
+      <form action="/content" method="GET">
+        <textarea
+          id="content"
+          name="content"
+          placeholder="Ingresa el contenido del articulo"
+          required
+        ></textarea>
+      </form>
+      <h2>Fecha</h2>
+      <form action="/date" method="GET">
+        <input type="date" id="date" name="date" required />
+      </form>
+      <button type="submit" class="boton">Enviar</button>
+    </div>
   </body>
 </html>
