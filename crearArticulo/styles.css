@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+h4 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+h2 {
+  margin-top: 20px;
+  text-align: left;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+#imagenPortada {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.example-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 20px;
+}
+p {
+  text-align: left;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+.separator {
+  margin-top: 20px;
+}
+.separator2 {
+  margin-top: 20px;
+}
