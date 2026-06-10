@@ -153,3 +153,68 @@ input[type="file"]:hover {
   text-align: center;
   font-weight: 600;
 }
+body.dark-mode {
+  background-color: #121212;
+}
+body.dark-mode div {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-top: 6px solid #ff3333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+body.dark-mode form {
+  background: #252525;
+  border: 1px solid #3d1a1a;
+}
+body.dark-mode form h2 {
+  color: #ff3333;
+  border-bottom: 2px solid #3d1a1a;
+}
+body.dark-mode label {
+  color: #b3b3b3;
+}
+body.dark-mode input[type="text"],
+body.dark-mode input[type="date"],
+body.dark-mode textarea {
+  background-color: #2d2d2d;
+  border: 2px solid #444444;
+  color: #ffffff;
+}
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="date"]:focus,
+body.dark-mode textarea:focus {
+  border-color: #ff3333;
+  box-shadow: 0 0 0 4px rgba(255, 51, 51, 0.25);
+}
+body.dark-mode input[type="file"] {
+  background: #2d1a1a;
+  border: 2px dashed #ff3333;
+  color: #e0e0e0;
+}
+body.dark-mode #boton {
+  background: linear-gradient(135deg, #ff3333 0%, #cc0000 100%);
+  box-shadow: 0 4px 12px rgba(255, 51, 51, 0.3);
+}
+body.dark-mode #boton:hover {
+  box-shadow: 0 6px 20px rgba(255, 51, 51, 0.5);
+}
+body.dark-mode #mensaje {
+  color: #ff4d4d;
+}
+.btn-dark-mode {
+  align-self: flex-end;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+body.dark-mode .btn-dark-mode {
+  background: #f4f4f4;
+  color: #111;
+}

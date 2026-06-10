@@ -61,3 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+const btnDarkMode = document.getElementById("toggle-dark-mode");
+btnDarkMode.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    btnDarkMode.textContent = "Modo Claro";
+  } else {
+    btnDarkMode.textContent = "Modo Oscuro";
+  }
+});
