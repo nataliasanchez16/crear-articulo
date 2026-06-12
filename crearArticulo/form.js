@@ -56,6 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
 console.log(todosLosArticulos)
 console.log(ultimoArticulo) 
+
+
+document.querySelector("#titulo-web")
+document.querySelector("#autor-web")
+document.querySelector("#contenido-web")
+document.querySelector("#descripcion-tag")
+document.querySelector("#fecha-web")
+
       } else {
         // 400 u otro error del servidor
         mensaje.textContent = datos.error || "Error al enviar.";
