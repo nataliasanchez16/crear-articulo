@@ -30,12 +30,6 @@ p {
   text-align: left;
   font-size: clamp(1rem, 3vw, 2rem);
 }
-.separator {
-  margin-top: 20px;
-}
-.separator2 {
-  margin-top: 20px;
-}
 form {
   background: white;
   padding: 20px;
