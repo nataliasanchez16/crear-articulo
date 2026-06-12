@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
-.web-container {
+#web-container {
   background-color: #ffffff;
   max-width: 800px;
   width: 100%;
@@ -21,41 +21,41 @@ body {
 .header-art {
   margin-bottom: 20px;
 }
-.titulo-web {
+#titulo-web {
   font-size: 2.5rem;
   color: #1a1a1a;
   margin: 0 0 10px 0;
   line-height: 1.2;
 }
-.autor-web {
+#autor-web {
   font-size: 1.1rem;
   color: #65676b;
   margin: 0;
 }
-.imagen-wrapper {
+#imagen-contenedor {
   width: 100%;
   margin-bottom: 25px;
   overflow: hidden;
   border-radius: 6px;
 }
-.imagen-web {
+#imagen-web {
   width: 100%;
   display: block;
   height: auto;
   object-fit: cover;
 }
-.contenido-web {
+#contenido-web {
   font-size: 1.15rem;
   line-height: 1.7;
   color: #050505;
 }
-.descripcion-tag {
+#descripcion-tag {
   font-size: 1.4rem;
   color: #333;
   margin-top: 0;
   margin-bottom: 10px;
 }
-.footer-art {
+#footer-art {
   margin-top: 30px;
   padding-top: 15px;
   border-top: 1px solid #e4e6eb;
