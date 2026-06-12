@@ -47,7 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // 201 Created — exito
         mensaje.textContent = `Articulo creado con id ${datos.id}`;
         mensaje.style.color = "green";
-        form.reset(); // limpiar el formulario
+        form.reset();// limpiar el formulario
+
+          const respuestaGet = await fetch(`${API_URL}/articulos`);
+  const todosLosArticulos = await respuestaGet.json();
+  console.log("Lista actualizada:", todosLosArticulos);
+  //
+const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
+console.log(todosLosArticulos)
+console.log(ultimoArticulo) 
       } else {
         // 400 u otro error del servidor
         mensaje.textContent = datos.error || "Error al enviar.";
