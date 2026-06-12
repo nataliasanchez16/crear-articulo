@@ -57,12 +57,11 @@ const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
 console.log(todosLosArticulos)
 console.log(ultimoArticulo) 
 
-
-document.querySelector("#titulo-web")
-document.querySelector("#autor-web")
-document.querySelector("#contenido-web")
-document.querySelector("#descripcion-tag")
-document.querySelector("#fecha-web")
+document.querySelector("#titulo-web").textContent = ultimoArticulo.titulo.textContent
+document.querySelector("#autor-web").textContent = ultimoArticulo.autor.textContent
+document.querySelector("#contenido-web").textContent = ultimoArticulo.contenido.textContent
+document.querySelector("#descripcion-tag").textContent = ultimoArticulo.descripcion.textContent
+document.querySelector("#fecha-web").textContent = ultimoArticulo.fecha.textContent
 
       } else {
         // 400 u otro error del servidor
