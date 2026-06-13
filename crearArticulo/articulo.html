@@ -4,35 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="estilos.css" />
-    <title #inicio>Articulos</title>
+    <title>Articulos</title>
   </head>
   <body>
     <main id="web-container">
       <header class="header-art">
         <h1 id="titulo-web">[AQUÍ_VA_EL_TITULO]</h1>
         <h2 id="subtitulo-web">[AQUÍ_VA_EL_SUBTITULO]</h2>
-        <p id="autor-web">Por: [AQUÍ_VA_EL_AUTOR]</p>
+        <div class="meta-info">
+          <p id="autor-web">Por: <span>[AQUÍ_VA_EL_AUTOR]</span></p>
+        </div>
       </header>
-      <div id="imagen-contenedor">
-        <img
-          id="imagen-web"
-          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80"
-          alt="Imagen del artículo"
-        />
-      </div>
-      <section>
-        <h2 id="descripcion-tag">[AQUÍ_VA_EL_TEXTO_DESCRIPCION]</h2>
-        <p id="contenido-web">[AQUÍ_VA_EL_CONTENIDO_DEL_ARTICULO]</p>
+      <article class="seccion-bloque">
+        <div id="imagen-contenedor">
+          <img
+            id="imagen-web"
+            src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80"
+            alt="Imagen del artículo"
+          />
+        </div>
+        <section class="texto-contenedor">
+          <h2 id="descripcion-tag">[AQUÍ_VA_EL_TEXTO_DESCRIPCION]</h2>
+          <p id="contenido-web">[AQUÍ_VA_EL_CONTENIDO_DEL_ARTICULO]</p>
+        </section>
+      </article>
+      <article class="seccion-bloque">
         <div id="imagen-contenedor2">
-        <img
-          id="imagen-web2"
-          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80"
-          alt="Imagen del artículo"
-        />
-         <h2 id="descripcion-tag2">[AQUÍ_VA_EL_TEXTO_DESCRIPCION]</h2>
-      </div>
-      <p id="contenido-web2">[AQUÍ_VA_EL_CONTENIDO_DEL_ARTICULO]</p>
-      </section>
+          <img
+            id="imagen-web2"
+            src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80"
+            alt="Imagen del artículo"
+          />
+        </div>
+        <section class="texto-contenedor">
+          <h3 id="descripcion-tag2">[AQUÍ_VA_EL_TEXTO_DESCRIPCION]</h3>
+          <p id="contenido-web2">[AQUÍ_VA_EL_CONTENIDO_DEL_ARTICULO]</p>
+        </section>
+      </article>
       <footer id="footer-art">
         <span id="fecha-web">Fecha de publicación: [AQUÍ_VA_LA_FECHA]</span>
       </footer>
