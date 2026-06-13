@@ -13,9 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 5. Leer los valores de los campos
     const titulo = document.getElementById("title").value.trim();
+    const subtitulo = document.getElementById("subtitulo").value.trim();
+    const imagen = document.getElementById("imagen").value.trim();
+    const imagen2 = document.getElementById("imagen2").value.trim();
     const autor = document.getElementById("autor").value.trim();
+    const descripcion2 = document.getElementById("descripcion2").value.trim();
     const descripcion = document.getElementById("descripcion").value.trim();
     const contenido = document.getElementById("content").value.trim();
+    const contenido2 = document.getElementById("content2").value.trim();
     const fecha = document.getElementById("date").value.trim();
     const button = document.getElementById("boton");
     // 6. Validacion basica del lado del cliente
@@ -27,10 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. Armar el objeto que vamos a enviar
     const nuevoArticulo = {
       titulo,
+      subtitulo,
       descripcion,
       autor,
       contenido,
       fecha,
+      imagen,
+      imagen2,
+      contenido2,
+      descripcion2,
     };
 
     try {

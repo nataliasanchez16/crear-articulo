@@ -21,6 +21,15 @@
           placeholder="Ingresa el titulo del articulo"
           required
         />
+        <h4>subtitulo</h4>
+        <label for="subtitulo">SubTitulo:</label>
+        <input
+          type="text"
+          id="subtitulo"
+          name="subtitulo"
+          placeholder="Ingresa el titulo del articulo"
+          required
+        />
         <label for="autor">Autor:</label>
         <input
           type="text"
@@ -30,8 +39,8 @@
           required
         />
         <h2>Imagen</h2>
-        <label for="imagen">Imagen:</label>
-        <input type="file" id="imagen" name="imagen" accept="image/*" />
+        <label for="imagen">Imagen (URL):</label>
+<input type="text" id="imagen" name="imagen" placeholder="Pega la URL de la imagen" />
         <label for="descripcion">Descripcion:</label>
         <textarea
           id="descripcion"
@@ -47,10 +56,28 @@
           placeholder="Ingresa el contenido del articulo"
           required
         ></textarea>
+        <h2>Imagen2</h2>
+        <label for="imagen2">Imagen (URL):</label>
+<input type="text" id="imagen2" name="imagen" placeholder="Pega la URL de la imagen" />
+<label for="descripcion2">Descripcion2:</label>
+<textarea
+          id="descripcion2"
+          name="descripcion"
+          placeholder="Ingresa la descripcion de la imagen"
+          required
+        ></textarea>
+          <h2>Contenido2</h2>
+           <label for="content2">Contenido2:</label>
+        <textarea
+          id="content2"
+          name="content"
+          placeholder="Ingresa el contenido del articulo"
+          required
+        ></textarea>
         <h2>Fecha</h2>
         <label for="date">Fecha:</label>
         <input type="date" id="date" name="date" required />
-        <button type="submit" id="boton">Enviar</button>
+        <button type="submit" id="boton">Enviar</button>      
       </form>
       <p id="mensaje"></p>
     </div>
