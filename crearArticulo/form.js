@@ -43,31 +43,22 @@ document.addEventListener("DOMContentLoaded", () => {
       // 9. Parsear la respuesta como JSON
       const datos = await respuesta.json();
       // 10. Manejar la respuesta segun el status HTTP
-      if (respuesta.ok) {
-        // 201 Created — exito
-        mensaje.textContent = `Articulo creado con id ${datos.id}`;
-        mensaje.style.color = "green";
-        form.reset();// limpiar el formulario
+     if (respuesta.ok) {
+  mensaje.textContent = `Articulo creado con id ${datos.id}`;
+  mensaje.style.color = "green";
+  form.reset();
 
-          const respuestaGet = await fetch(`${API_URL}/articulos`);
+  const respuestaGet = await fetch(`${API_URL}/articulos`);
   const todosLosArticulos = await respuestaGet.json();
-  console.log("Lista actualizada:", todosLosArticulos);
-  //
-const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
-console.log(todosLosArticulos)
-console.log(ultimoArticulo) 
+  const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
 
-document.querySelector("#titulo-web").textContent = ultimoArticulo.titulo.textContent
-document.querySelector("#autor-web").textContent = ultimoArticulo.autor.textContent
-document.querySelector("#contenido-web").textContent = ultimoArticulo.contenido.textContent
-document.querySelector("#descripcion-tag").textContent = ultimoArticulo.descripcion.textContent
-document.querySelector("#fecha-web").textContent = ultimoArticulo.fecha.textContent
+  localStorage.setItem("ultimoArticulo", JSON.stringify(ultimoArticulo));
+ window.location.href = "/crearArticulo/articulo.html";
 
       } else {
-        // 400 u otro error del servidor
-        mensaje.textContent = datos.error || "Error al enviar.";
-        mensaje.style.color = "red";
-      }
+  mensaje.textContent = datos.error || "Error al enviar.";
+  mensaje.style.color = "red";
+}
     } catch (error) {
       // Error de red: back end apagado, CORS mal configurado, etc.
       console.error("Error de red:", error);
