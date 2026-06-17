@@ -1,19 +1,60 @@
-#imagenPortada {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  position: relative;
-  display: inline-block;
+/* Reset básico para evitar márgenes rebeldes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#imagenPortada img {
-  width: 100%;
-  display: block;
+
+main {
+  /* Imagen de fondo que cubre todo sin deformarse */
+  background-image: url("image/Image20260612184641.png");
+  background-size: cover; /* Cambiado de 'contain' a 'cover' para llenar la pantalla */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+  width: 100vw;
+  position: relative; /* Clave para que los elementos hijos se posicionen respecto a 'main' */
 }
-#texto-superpuesto {
+
+/* API del Clima: Arriba a la izquierda */
+#clima-container {
   position: absolute;
   top: 20px;
   left: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo semi-transparente para que sea legible */
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* Contenedor de Botones: Abajo a la izquierda en vertical */
+.botones-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+  display: flex;
+  flex-direction: column; /* Alinea los botones verticalmente */
+  gap: 10px; /* Espacio entre cada botón */
+}
+
+/* Estilo opcional para que los botones se vean ordenados (puedes quitarlo o cambiarlo) */
+.botones-container button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  background-color: #0056b3;
   color: white;
-  font-weight: bold;
+  border-radius: 5px;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.botones-container button:hover {
+  background-color: #004085;
 }

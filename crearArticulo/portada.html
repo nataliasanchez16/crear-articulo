@@ -3,26 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="stylo.css" />
-
-    <title #inicio>INNURU</title>
+    <title>INNURU</title>
   </head>
 
   <body>
-    <section class="py-3 bg-light border-bottom">
-      <div class="container">
-        <div id="clima" class="text-center">
-          <p class="text-muted mb-0">Cargando clima...</p>
+    <main>
+      <section id="clima-container">
+        <div id="clima">
+          <p>Cargando clima...</p>
         </div>
+      </section>
+
+      <div class="botones-container">
+        <button type="button" id="boton">Ir al último artículo creado</button>
+        <button type="button" id="boton2">Ir al Formulario</button>
+        <button type="button" id="boton3">Ir al Primer artículo</button>
+        <button type="button" id="boton4">Ir al Segundo artículo</button>
+        <button type="button" id="boton5">Ir al Tercer artículo</button>
+        <button type="button" id="boton6">Ir al Cuarto artículo</button>
       </div>
-    </section>
-    <img
-      id="imagenPortada"
-      src="image/Image20260612184641.png"
-      alt="Logo de INNURU"
-    />
-     <button type="submit" id="boton">Enviar</button>
+    </main>
+
     <script src="portada.js"></script>
   </body>
 </html>
