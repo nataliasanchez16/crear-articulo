@@ -52,8 +52,8 @@ cargarClima()
  const boton4 = document.getElementById("boton4");
  const boton5 = document.getElementById("boton5");
  const boton6 = document.getElementById("boton6");
-boton.addEventListener("click", (evento) => {window.location.href = "/crearArticulo/articulo.html";
-  boton2.addEventListener("click", (evento) => {window.location.href = "/crearArticulo/crearArticulo.html";
+boton.addEventListener("click", (evento) => {window.location.href = "/crearArticulo/articulo.html";})
+  boton2.addEventListener("click", (evento) => {window.location.href = "/crearArticulo/crearArticulo.html";})
   
   boton3.addEventListener("click", (evento) => {
   document.querySelector("#titulo-web").innerHTML = articulo1.titulo;
@@ -106,4 +106,4 @@ boton.addEventListener("click", (evento) => {window.location.href = "/crearArtic
   document.querySelector("#imagen-web2").src = articulo4.imagen2;
   document.querySelector("#contenido-web2").innerHTML = articulo4.contenido2;
   window.location.href = "/crearArticulo/articulo.html";})
-})})});
+});
