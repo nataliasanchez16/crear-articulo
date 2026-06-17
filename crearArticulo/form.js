@@ -53,22 +53,21 @@ document.addEventListener("DOMContentLoaded", () => {
       // 9. Parsear la respuesta como JSON
       const datos = await respuesta.json();
       // 10. Manejar la respuesta segun el status HTTP
-     if (respuesta.ok) {
-  mensaje.textContent = `Articulo creado con id ${datos.id}`;
-  mensaje.style.color = "green";
-  form.reset();
+      if (respuesta.ok) {
+        mensaje.textContent = `Articulo creado con id ${datos.id}`;
+        mensaje.style.color = "green";
+        form.reset();
 
-  const respuestaGet = await fetch(`${API_URL}/articulos`);
-  const todosLosArticulos = await respuestaGet.json();
-  const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
+        const respuestaGet = await fetch(`${API_URL}/articulos`);
+        const todosLosArticulos = await respuestaGet.json();
+        const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
 
-  localStorage.setItem("ultimoArticulo", JSON.stringify(ultimoArticulo));
- window.location.href = "/crearArticulo/articulo.html";
-
+        localStorage.setItem("ultimoArticulo", JSON.stringify(ultimoArticulo));
+        window.location.href = "/crearArticulo/articulo.html";
       } else {
-  mensaje.textContent = datos.error || "Error al enviar.";
-  mensaje.style.color = "red";
-}
+        mensaje.textContent = datos.error || "Error al enviar.";
+        mensaje.style.color = "red";
+      }
     } catch (error) {
       // Error de red: back end apagado, CORS mal configurado, etc.
       console.error("Error de red:", error);
