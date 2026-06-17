@@ -61,8 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const respuestaGet = await fetch(`${API_URL}/articulos`);
         const todosLosArticulos = await respuestaGet.json();
         const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
-
-        localStorage.setItem("ultimoArticulo", JSON.stringify(ultimoArticulo));
+        
         window.location.href = "/crearArticulo/articulo.html";
       } else {
         mensaje.textContent = datos.error || "Error al enviar.";

@@ -42,11 +42,9 @@ disponible.</p>`;
 const textoDiv = document.getElementById("clima");
 // Llamar al cargar la página
 cargarClima()
-
-form.addEventListener("submit", async (evento) => {
-    console.log("ando la portada");
-    evento.preventDefault();
-  
+ const boton = document.getElementById("boton");
+boton.addEventListener("click", (evento) => {
+     window.location.href = "/crearArticulo/articulo.html";
 });
 });
 
