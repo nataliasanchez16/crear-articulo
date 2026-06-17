@@ -1,4 +1,10 @@
 // js/script.js
+const API_URL = "http://localhost:3000";
+document.addEventListener("DOMContentLoaded", async () => {
+  const respuestaGet = await fetch(`${API_URL}/articulos`);
+        const todosLosArticulos = await respuestaGet.json();
+        const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
+
 function emojiClima(code) {
   if (code === 0) return "☀️";
   if (code <= 3) return "⛅";
@@ -35,4 +41,12 @@ disponible.</p>`;
 }
 const textoDiv = document.getElementById("clima");
 // Llamar al cargar la página
-cargarClima();
+cargarClima()
+
+form.addEventListener("submit", async (evento) => {
+    console.log("ando la portada");
+    evento.preventDefault();
+  
+});
+});
+
