@@ -1,9 +1,9 @@
-//const API_URL = "http://localhost:3000";
+const API_URL = "http://localhost:3000";
 document.addEventListener("DOMContentLoaded", async () => {
   const respuestaGet = await fetch(`${API_URL}/articulos`);
-        const todosLosArticulos = await respuestaGet.json();
-        const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
-        const articulo2 = ultimoArticulo
+  const todosLosArticulos = await respuestaGet.json();
+  const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
+  const articulo = ultimoArticulo;
 
   document.querySelector("#titulo-web").innerHTML = articulo.titulo;
   document.querySelector("#subtitulo-web").innerHTML = articulo.subtitulo;
