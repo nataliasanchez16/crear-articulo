@@ -41,55 +41,25 @@ const textoDiv = document.getElementById("clima");
 // Llamar al cargar la página
 cargarClima()
 });
- const boton = document.getElementById("boton");
- const boton2 = document.getElementById("boton2");
- const boton3 = document.getElementById("boton3");
- const boton4 = document.getElementById("boton4");
- const boton5 = document.getElementById("boton5");
- const boton6 = document.getElementById("boton6");
-  boton.addEventListener("click", async (evento) => {window.location.href = "/crearArticulo/articulo.html";})
-  boton2.addEventListener("click", async (evento2) => {window.location.href = "/crearArticulo/crearArticulo.html";})
+  document.getElementById("boton").addEventListener("click", () => {
+    const ultimoId = todosLosArticulos[todosLosArticulos.length - 1].id;
+    window.location.href = `articulo.html?id=${ultimoId}`;
+  });
 
-   boton3.addEventListener("click", async (evento3) => {window.location.href = "/crearArticulo/articulo.html";const articulo = todosLosArticulos[0]; document.querySelector("#titulo-web").innerHTML = articulo.titulo;
-  document.querySelector("#subtitulo-web").innerHTML = articulo.subtitulo;
-  document.querySelector("#autor-web").innerHTML = articulo.autor;
-  document.querySelector("#descripcion-tag").innerHTML = articulo.descripcion;
-  document.querySelector("#descripcion-tag2").innerHTML = articulo.descripcion2;
-  document.querySelector("#fecha-web").innerHTML = articulo.fecha;
-  document.querySelector("#contenido-web").innerHTML = articulo.contenido;
-  document.querySelector("#imagen-web").src = articulo.imagen;
-  document.querySelector("#imagen-web2").src = articulo.imagen2;
-  document.querySelector("#contenido-web2").innerHTML = articulo.contenido2; })
+  document.getElementById("boton2").addEventListener("click", () => {
+    window.location.href = "crearArticulo.html";
+  });
 
-    boton4.addEventListener("click", async (evento4) => {window.location.href = "/crearArticulo/articulo.html";const articulo = todosLosArticulos[1];  document.querySelector("#titulo-web").innerHTML = articulo.titulo;
-  document.querySelector("#subtitulo-web").innerHTML = articulo.subtitulo;
-  document.querySelector("#autor-web").innerHTML = articulo.autor;
-  document.querySelector("#descripcion-tag").innerHTML = articulo.descripcion;
-  document.querySelector("#descripcion-tag2").innerHTML = articulo.descripcion2;
-  document.querySelector("#fecha-web").innerHTML = articulo.fecha;
-  document.querySelector("#contenido-web").innerHTML = articulo.contenido;
-  document.querySelector("#imagen-web").src = articulo.imagen;
-  document.querySelector("#imagen-web2").src = articulo.imagen2;
-  document.querySelector("#contenido-web2").innerHTML = articulo.contenido2;})
-
-     boton5.addEventListener("click", async (evento5) => { window.location.href = "/crearArticulo/articulo.html";const articulo = todosLosArticulos[2];  document.querySelector("#titulo-web").innerHTML = articulo.titulo;
-  document.querySelector("#subtitulo-web").innerHTML = articulo.subtitulo;
-  document.querySelector("#autor-web").innerHTML = articulo.autor;
-  document.querySelector("#descripcion-tag").innerHTML = articulo.descripcion;
-  document.querySelector("#descripcion-tag2").innerHTML = articulo.descripcion2;
-  document.querySelector("#fecha-web").innerHTML = articulo.fecha;
-  document.querySelector("#contenido-web").innerHTML = articulo.contenido;
-  document.querySelector("#imagen-web").src = articulo.imagen;
-  document.querySelector("#imagen-web2").src = articulo.imagen2;
-  document.querySelector("#contenido-web2").innerHTML = articulo.contenido2;})
-
-      boton6.addEventListener("click", async (evento6) => { window.location.href = "/crearArticulo/articulo.html";const articulo = todosLosArticulos[3];  document.querySelector("#titulo-web").innerHTML = articulo.titulo;
-  document.querySelector("#subtitulo-web").innerHTML = articulo.subtitulo;
-  document.querySelector("#autor-web").innerHTML = articulo.autor;
-  document.querySelector("#descripcion-tag").innerHTML = articulo.descripcion;
-  document.querySelector("#descripcion-tag2").innerHTML = articulo.descripcion2;
-  document.querySelector("#fecha-web").innerHTML = articulo.fecha;
-  document.querySelector("#contenido-web").innerHTML = articulo.contenido;
-  document.querySelector("#imagen-web").src = articulo.imagen;
-  document.querySelector("#imagen-web2").src = articulo.imagen2;
-  document.querySelector("#contenido-web2").innerHTML = articulo.contenido2;})
+  // Botones 3-6: cada uno manda el id del artículo en la URL
+  document.getElementById("boton3").addEventListener("click", () => {
+    window.location.href = `articulo.html?id=${todosLosArticulos[0].id}`;
+  });
+  document.getElementById("boton4").addEventListener("click", () => {
+    window.location.href = `articulo.html?id=${todosLosArticulos[1].id}`;
+  });
+  document.getElementById("boton5").addEventListener("click", () => {
+    window.location.href = `articulo.html?id=${todosLosArticulos[2].id}`;
+  });
+  document.getElementById("boton6").addEventListener("click", () => {
+    window.location.href = `articulo.html?id=${todosLosArticulos[3].id}`;
+  });
