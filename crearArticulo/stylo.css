@@ -1,49 +1,54 @@
-/* Reset básico para evitar márgenes rebeldes */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: #000000; /* Fondo negro para rellenar los bordes vacíos si la pantalla no coincide con el formato de la imagen */
+  overflow: hidden; /* Evita scrolls innecesarios si la imagen encaja justa */
+}
+
 main {
-  /* Imagen de fondo que cubre todo sin deformarse */
-  background-image: url("image/Image20260612184641.png");
-  background-size: cover; /* Cambiado de 'contain' a 'cover' para llenar la pantalla */
+  /* Cargamos la imagen de fondo */
+  background-image: url("image/Image20260617192651.png");
+
+  /* CLAVE: Muestra la imagen COMPLETA sin recortar nada y sin deformarla */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 
-  height: 100vh;
+  /* El contenedor ocupa exactamente el total de la pantalla visible */
   width: 100vw;
-  position: relative; /* Clave para que los elementos hijos se posicionen respecto a 'main' */
+  height: 100vh;
+  position: relative;
 }
 
-/* API del Clima: Arriba a la izquierda */
+/* API del Clima: Arriba a la izquierda de la pantalla */
 #clima-container {
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Fondo semi-transparente para que sea legible */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 10px 15px;
   border-radius: 8px;
+  z-index: 10;
 }
 
-/* Contenedor de Botones: Abajo a la izquierda en vertical */
+/* Contenedor de Botones: Abajo a la izquierda de la pantalla */
 .botones-container {
   position: absolute;
   bottom: 20px;
   left: 20px;
 
   display: flex;
-  flex-direction: column; /* Alinea los botones verticalmente */
-  gap: 10px; /* Espacio entre cada botón */
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
 }
 
-/* Estilo opcional para que los botones se vean ordenados (puedes quitarlo o cambiarlo) */
+/* Estilo visual de los botones */
 .botones-container button {
   padding: 10px 15px;
   cursor: pointer;
