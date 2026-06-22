@@ -1,18 +1,48 @@
 const API_URL = "http://localhost:3000";
-document.addEventListener("DOMContentLoaded", async () => {
-  const respuestaGet = await fetch(`${API_URL}/articulos`);
-  const todosLosArticulos = await respuestaGet.json();
-  const ultimoArticulo = todosLosArticulos[todosLosArticulos.length - 1];
-  const articulo = ultimoArticulo;
 
-  document.querySelector("#titulo-web").innerHTML = articulo.titulo;
-  document.querySelector("#subtitulo-web").innerHTML = articulo.subtitulo;
-  document.querySelector("#autor-web").innerHTML = articulo.autor;
-  document.querySelector("#descripcion-tag").innerHTML = articulo.descripcion;
-  document.querySelector("#descripcion-tag2").innerHTML = articulo.descripcion2;
-  document.querySelector("#fecha-web").innerHTML = articulo.fecha;
-  document.querySelector("#contenido-web").innerHTML = articulo.contenido;
-  document.querySelector("#imagen-web").src = articulo.imagen;
-  document.querySelector("#imagen-web2").src = articulo.imagen2;
-  document.querySelector("#contenido-web2").innerHTML = articulo.contenido2;
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const parametrosURL = new URLSearchParams(window.location.search);
+    const articuloId = parametrosURL.get("id");
+
+    let articulo;
+
+    if (articuloId) {
+      const respuestaGet = await fetch(`${API_URL}/articulos/${articuloId}`);
+      if (!respuestaGet.ok)
+        throw new Error("No se encontró el artículo solicitado");
+      articulo = await respuestaGet.json();
+    } else {
+      const respuestaGet = await fetch(`${API_URL}/articulos`);
+      const todosLosArticulos = await respuestaGet.json();
+
+      if (todosLosArticulos.length === 0) {
+        console.warn("No hay artículos en el servidor.");
+        return;
+      }
+      articulo = todosLosArticulos[todosLosArticulos.length - 1];
+    }
+    document.querySelector("#titulo-web").textContent = articulo.titulo;
+    document.querySelector("#subtitulo-web").textContent = articulo.subtitulo;
+    document.querySelector("#autor-web").textContent = articulo.autor;
+    document.querySelector("#descripcion-tag").textContent =
+      articulo.descripcion;
+    document.querySelector("#descripcion-tag2").textContent =
+      articulo.descripcion2;
+    document.querySelector("#contenido-web").textContent = articulo.contenido;
+    document.querySelector("#contenido-web2").textContent = articulo.contenido2;
+    document.querySelector("#fecha-web").textContent =
+      `Fecha de publicación: ${articulo.fecha}`;
+    const imagenPorDefecto =
+      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80";
+    document.querySelector("#imagen-web").src =
+      articulo.imagen || imagenPorDefecto;
+    document.querySelector("#imagen-web2").src =
+      articulo.imagen2 || imagenPorDefecto;
+  } catch (error) {
+    console.error("Error al cargar el artículo:", error);
+    document.querySelector("#titulo-web").textContent = "Error 404";
+    document.querySelector("#subtitulo-web").textContent =
+      "Artículo no encontrado o servidor apagado.";
+  }
 });
