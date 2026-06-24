@@ -246,8 +246,9 @@ body.dark-mode .btn-dark-mode {
   background-color: #004085;
 }
 body.dark-mode .boton-volver {
-  background-color: #ff3333;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #333;
+  font-weight: 600;
 }
 
 body.dark-mode .boton-volver:hover {
