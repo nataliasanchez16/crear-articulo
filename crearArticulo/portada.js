@@ -38,24 +38,31 @@ disponible.</p>`;
   const textoDiv = document.getElementById("clima");
   // Llamar al cargar la página
   cargarClima();
-  const todosLosArticulos = await respuestaGet.json();
-  document.getElementById("boton").addEventListener("click", () => {
-    const ultimoId = todosLosArticulos[todosLosArticulos.length - 1].id;
-    window.location.href = `articulo.html?id=${ultimoId}`;
+const todosLosArticulos = await respuestaGet.json();
+
+todosLosArticulos.forEach((articulo, index) => {
+  const contenedor = document.createElement('div');
+  contenedor.className = 'div-Botones';
+
+  const img = document.createElement('img');
+  img.src = articulo.imagen;
+  img.alt = articulo.descripcion;
+
+  const boton = document.createElement('button');
+  boton.id = `boton${index + 1}`;
+  boton.className = 'boton-estilo';
+  boton.innerHTML = articulo.titulo;
+
+  boton.addEventListener("click", () => {
+    window.location.href = `articulo.html?id=${todosLosArticulos[index].id}`;
   });
-  document.getElementById("boton2").addEventListener("click", () => {
+
+  contenedor.appendChild(img);
+  contenedor.appendChild(boton);
+
+  document.querySelector(".botones-container").appendChild(contenedor);
+});
+document.getElementById("botonFormulario").addEventListener("click", () => {
     window.location.href = "crearArticulo.html";
-  });
-  document.getElementById("boton3").addEventListener("click", () => {
-    window.location.href = `articulo.html?id=${todosLosArticulos[0].id}`;
-  });
-  document.getElementById("boton4").addEventListener("click", () => {
-    window.location.href = `articulo.html?id=${todosLosArticulos[1].id}`;
-  });
-  document.getElementById("boton5").addEventListener("click", () => {
-    window.location.href = `articulo.html?id=${todosLosArticulos[2].id}`;
-  });
-  document.getElementById("boton6").addEventListener("click", () => {
-    window.location.href = `articulo.html?id=${todosLosArticulos[3].id}`;
   });
 });
