@@ -10,13 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const titulo = document.getElementById("title").value.trim();
     const subtitulo = document.getElementById("subtitulo").value.trim();
-    const imagen = document.getElementById("imagen").value.trim();
-    const imagen2 = document.getElementById("imagen2").value.trim();
-    const autor = document.getElementById("autor").value.trim();
-    const descripcion2 = document.getElementById("descripcion2").value.trim();
-    const descripcion = document.getElementById("descripcion").value.trim();
     const contenido = document.getElementById("content").value.trim();
-    const contenido2 = document.getElementById("content2").value.trim();
+    const descripcion = document.getElementById("descripcion").value.trim();
+    const autor = document.getElementById("autor").value.trim();
+    const imagen = document.getElementById("imagen").value.trim();
+    const tituloEN = document.getElementById("titleEN").value.trim();
+    const subtituloEN = document.getElementById("subtituloEN").value.trim();
+    const imagenEN = document.getElementById("imagenEN").value.trim();
+    const descripcionEN = document.getElementById("descripcionEN").value.trim();
+    const contenidoEN = document.getElementById("contentEN").value.trim();
     const fecha = document.getElementById("date").value.trim();
 
     if (!titulo || !descripcion || !autor) {
@@ -31,11 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
       descripcion,
       autor,
       contenido,
-      fecha,
       imagen,
-      imagen2,
-      contenido2,
-      descripcion2,
+      tituloEN,
+      subtituloEN,
+      imagenEN,
+      descripcionEN,
+      contenidoEN,
+      fecha,
     };
 
     try {

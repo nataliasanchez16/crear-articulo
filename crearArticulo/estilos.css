@@ -30,7 +30,8 @@ body {
   border-bottom: 1px solid #f1f5f9;
   padding-bottom: 20px;
 }
-#titulo-web {
+#titulo-web,
+#titulo-webEN {
   font-size: 2.6rem;
   font-weight: 800;
   color: #0f172a;
@@ -38,51 +39,55 @@ body {
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
-#subtitulo-web {
+#subtitulo-web,
+#subtitulo-webEN {
   font-size: 1.3rem;
   font-weight: 400;
   color: #475569;
   line-height: 1.5;
   margin: 0 0 16px 0;
 }
-.meta-info {
+.meta-info,
+.meta-infoEN {
   font-size: 0.95rem;
   color: #64748b;
 }
-#autor-web {
+#autor-web,
+#autor-webEN span {
   margin: 0;
-}
-#autor-web span {
   font-weight: 600;
   color: #334155;
 }
-.seccion-bloque {
+
+.seccion-bloque,
+.seccion-bloque-EN {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 40px;
 }
 #imagen-contenedor,
-#imagen-contenedor2 {
+#imagen-contenedorEN {
   width: 100%;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 #imagen-web,
-#imagen-web2 {
+#imagen-webEN {
   width: 100%;
   height: 380px;
   display: block;
   object-fit: cover;
 }
-.texto-contenedor {
+.texto-contenedor,
+.texto-contenedor-EN {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 #descripcion-tag,
-#descripcion-tag2 {
+#descripcion-tagEN {
   font-size: 1.5rem;
   color: #0f172a;
   margin: 0;
@@ -90,7 +95,7 @@ body {
   letter-spacing: -0.01em;
 }
 #contenido-web,
-#contenido-web2 {
+#contenido-webEN {
   font-size: 1.15rem;
   line-height: 1.75;
   color: #334155;
@@ -111,17 +116,20 @@ body {
   body {
     padding: 15px 10px;
   }
-  #web-container {
+  #web-container,
+  #web-containerEN {
     padding: 25px 20px;
   }
-  #titulo-web {
+  #titulo-web,
+  #titulo-webEN {
     font-size: 2rem;
   }
-  #subtitulo-web {
+  #subtitulo-web,
+  #subtitulo-webEN {
     font-size: 1.15rem;
   }
   #imagen-web,
-  #imagen-web2 {
+  #imagen-webEN {
     height: 240px;
   }
 }
@@ -182,15 +190,19 @@ body.dark-mode #web-container {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 body.dark-mode #titulo-web,
+body.dark-mode #titulo-webEN,
 body.dark-mode #descripcion-tag,
-body.dark-mode #descripcion-tag2 {
+body.dark-mode #descripcion-tagEN {
   color: #ff3333;
 }
 body.dark-mode #subtitulo-web,
+body.dark-mode #subtitulo-webEN,
 body.dark-mode .meta-info,
+body.dark-mode .meta-infoEN,
 body.dark-mode #autor-web span,
+body.dark-mode #autor-webEN span,
 body.dark-mode #contenido-web,
-body.dark-mode #contenido-web2 {
+body.dark-mode #contenido-webEN {
   color: #e0e0e0;
 }
 body.dark-mode .header-art,
