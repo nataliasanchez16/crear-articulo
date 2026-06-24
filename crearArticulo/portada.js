@@ -38,31 +38,29 @@ disponible.</p>`;
   const textoDiv = document.getElementById("clima");
   // Llamar al cargar la página
   cargarClima();
-const todosLosArticulos = await respuestaGet.json();
-
-todosLosArticulos.forEach((articulo, index) => {
-  const contenedor = document.createElement('div');
-  contenedor.className = 'div-Botones';
-
-  const img = document.createElement('img');
-  img.src = articulo.imagen;
-  img.alt = articulo.descripcion;
-
-  const boton = document.createElement('button');
-  boton.id = `boton${index + 1}`;
-  boton.className = 'boton-estilo';
-  boton.innerHTML = articulo.titulo;
-
-  boton.addEventListener("click", () => {
-    window.location.href = `articulo.html?id=${todosLosArticulos[index].id}`;
+  const todosLosArticulos = await respuestaGet.json();
+  const contenedorPadre = document.querySelector(".botones-container");
+  todosLosArticulos.forEach((articulo, index) => {
+    const contenedor = document.createElement("div");
+    contenedor.className = "div-Botones";
+    const img = document.createElement("img");
+    img.src = Array.isArray(articulo.imagen)
+      ? articulo.imagen[0]
+      : articulo.imagen;
+    img.alt = articulo.titulo;
+    img.className = "img-articulo";
+    const boton = document.createElement("button");
+    boton.id = `boton${index + 1}`;
+    boton.className = "boton-estilo";
+    boton.textContent = articulo.titulo;
+    boton.addEventListener("click", () => {
+      window.location.href = `articulo.html?id=${articulo.id}`;
+    });
+    contenedor.appendChild(img);
+    contenedor.appendChild(boton);
+    contenedorPadre.appendChild(contenedor);
   });
-
-  contenedor.appendChild(img);
-  contenedor.appendChild(boton);
-
-  document.querySelector(".botones-container").appendChild(contenedor);
-});
-document.getElementById("botonFormulario").addEventListener("click", () => {
+  document.getElementById("botonFormulario").addEventListener("click", () => {
     window.location.href = "crearArticulo.html";
   });
 });

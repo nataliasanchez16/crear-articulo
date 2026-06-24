@@ -50,7 +50,7 @@ div {
   flex-direction: column;
   color: #1a1a1a;
   font-size: 1.8rem;
-  font-weight: 800; /* Texto más fuerte */
+  font-weight: 800;
   text-align: center;
 }
 form h2 {
@@ -225,4 +225,31 @@ body.dark-mode #mensaje {
 body.dark-mode .btn-dark-mode {
   background: #f4f4f4;
   color: #111;
+}
+.boton-volver {
+  align-self: flex-start;
+  width: max-content;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+.boton-volver:hover {
+  background-color: #004085;
+}
+body.dark-mode .boton-volver {
+  background-color: #ff3333;
+  color: #ffffff;
+}
+
+body.dark-mode .boton-volver:hover {
+  background-color: #cc0000;
 }

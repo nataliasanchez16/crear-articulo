@@ -1,31 +1,21 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  background-color: #000000; /* Fondo negro para rellenar los bordes vacíos si la pantalla no coincide con el formato de la imagen */
-  overflow: hidden; /* Evita scrolls innecesarios si la imagen encaja justa */
+  background-color: #000000;
+  overflow: hidden;
 }
-
 main {
-  /* Cargamos la imagen de fondo */
   background-image: url("image/Image20260617192651.png");
-
-  /* CLAVE: Muestra la imagen COMPLETA sin recortar nada y sin deformarla */
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* El contenedor ocupa exactamente el total de la pantalla visible */
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-
-/* API del Clima: Arriba a la izquierda de la pantalla */
 #clima-container {
   position: absolute;
   top: 20px;
@@ -35,20 +25,15 @@ main {
   border-radius: 8px;
   z-index: 10;
 }
-
-/* Contenedor de Botones: Abajo a la izquierda de la pantalla */
 .botones-container {
   position: absolute;
   bottom: 20px;
   left: 20px;
-
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   z-index: 10;
 }
-
-/* Estilo visual de los botones */
 .botones-container button {
   padding: 10px 15px;
   cursor: pointer;
@@ -59,7 +44,28 @@ main {
   text-align: left;
   transition: background 0.3s;
 }
-
-.botones-container button:hover {
+.div-Botones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.img-articulo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.boton-estilo .botonFormulario {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 5px;
+  text-align: left;
+  transition: background 0.3s;
+}
+.boton-estilo .botonFormulario:hover {
   background-color: #004085;
 }

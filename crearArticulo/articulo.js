@@ -46,3 +46,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       "Artículo no encontrado o servidor apagado.";
   }
 });
+const btnDarkMode = document.getElementById("toggle-dark-mode");
+btnDarkMode.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  btnDarkMode.textContent = document.body.classList.contains("dark-mode")
+    ? "Modo Claro"
+    : "Modo Oscuro";
+});
