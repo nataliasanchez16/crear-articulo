@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.querySelector("#titulo-webEN").textContent = articulo.tituloEN;
     document.querySelector("#subtitulo-webEN").textContent =
       articulo.subtituloEN;
-    document.querySelector("#autor-webEN").textContent = articulo.autor;
     document.querySelector("#descripcion-tagEN").textContent =
       articulo.descripcionEN;
     document.querySelector("#contenido-webEN").textContent =

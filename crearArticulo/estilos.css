@@ -34,7 +34,7 @@ body {
 #titulo-webEN {
   font-size: 2.6rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #071b4b;
   margin: 0 0 12px 0;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -52,8 +52,7 @@ body {
   font-size: 0.95rem;
   color: #64748b;
 }
-#autor-web,
-#autor-webEN span {
+#autor-web {
   margin: 0;
   font-weight: 600;
   color: #334155;
@@ -88,17 +87,16 @@ body {
 }
 #descripcion-tag,
 #descripcion-tagEN {
-  font-size: 1rem;
-  color: #0f172a;
+  font-size: 0.85rem;
+  color: #6e6f71;
   margin: 0;
-  font-weight: 700;
   letter-spacing: -0.01em;
 }
 #contenido-web,
 #contenido-webEN {
   font-size: 1.15rem;
   line-height: 1.75;
-  color: #334155;
+  color: #010101;
   margin: 0;
 }
 #footer-art {
@@ -113,7 +111,7 @@ body {
   text-align: right;
 }
 #bibliografia-web {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   color: #010101;
   margin: 0;
@@ -211,7 +209,8 @@ body.dark-mode .meta-infoEN,
 body.dark-mode #autor-web,
 body.dark-mode #autor-webEN,
 body.dark-mode #contenido-web,
-body.dark-mode #contenido-webEN {
+body.dark-mode #contenido-webEN,
+body.dark-mode #bibliografia-web {
   color: #e0e0e0;
 }
 body.dark-mode .header-art,
