@@ -88,7 +88,7 @@ body {
 }
 #descripcion-tag,
 #descripcion-tagEN {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #0f172a;
   margin: 0;
   font-weight: 700;
@@ -190,17 +190,20 @@ body.dark-mode #web-container {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 body.dark-mode #titulo-web,
-body.dark-mode #titulo-webEN,
-body.dark-mode #descripcion-tag,
-body.dark-mode #descripcion-tagEN {
+body.dark-mode #titulo-webEN {
   color: #ff3333;
 }
+body.dark-mode #descripcion-tag,
+body.dark-mode #descripcion-tagEN {
+  color: #334155;
+}
+
 body.dark-mode #subtitulo-web,
 body.dark-mode #subtitulo-webEN,
 body.dark-mode .meta-info,
 body.dark-mode .meta-infoEN,
-body.dark-mode #autor-web span,
-body.dark-mode #autor-webEN span,
+body.dark-mode #autor-web,
+body.dark-mode #autor-webEN,
 body.dark-mode #contenido-web,
 body.dark-mode #contenido-webEN {
   color: #e0e0e0;
