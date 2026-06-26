@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagenEN = document.getElementById("imagenEN").value.trim();
     const descripcionEN = document.getElementById("descripcionEN").value.trim();
     const contenidoEN = document.getElementById("contentEN").value.trim();
+    const bibliografia = document.getElementById("bibliografia").value.trim();
     const fecha = document.getElementById("date").value.trim();
 
     if (!titulo || !descripcion || !autor) {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       imagenEN,
       descripcionEN,
       contenidoEN,
+      bibliografia,
       fecha,
     };
 

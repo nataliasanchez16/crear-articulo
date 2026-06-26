@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       articulo.descripcionEN;
     document.querySelector("#contenido-webEN").textContent =
       articulo.contenidoEN;
+    document.querySelector("#bibliografia-web").textContent =
+      articulo.bibliografia;
     document.querySelector("#fecha-web").textContent =
       `Fecha de publicación: ${articulo.fecha}`;
     const imagenPorDefecto =
