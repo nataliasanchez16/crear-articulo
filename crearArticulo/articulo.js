@@ -24,11 +24,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     document.querySelector("#titulo-web").textContent = articulo.titulo;
     document.querySelector("#subtitulo-web").textContent = articulo.subtitulo;
-    document.querySelector("#autor-web").textContent = articulo.autor;
+    const autorSpan = document.querySelector("#autor-web span");
+    if (autorSpan) autorSpan.textContent = articulo.autor;
+    else document.querySelector("#autor-web").textContent = articulo.autor;
     document.querySelector("#descripcion-tag").textContent =
       articulo.descripcion;
     document.querySelector("#contenido-web").textContent = articulo.contenido;
-    document.querySelector("#titulo-webEN").textContent = articulo.tituloEN;
+    const tituloDivEN = document.querySelector("#titulo-webEN div");
+    if (tituloDivEN) tituloDivEN.textContent = articulo.tituloEN;
+    else
+      document.querySelector("#titulo-webEN").textContent = articulo.tituloEN;
     document.querySelector("#subtitulo-webEN").textContent =
       articulo.subtituloEN;
     document.querySelector("#descripcion-tagEN").textContent =
@@ -39,12 +44,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       articulo.bibliografia;
     document.querySelector("#fecha-web").textContent =
       `Fecha de publicación: ${articulo.fecha}`;
+
     const imagenPorDefecto =
       "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80";
-    document.querySelector("#imagen-web").src =
-      articulo.imagen || imagenPorDefecto;
-    document.querySelector("#imagen-webEN").src =
-      articulo.imagenEN || imagenPorDefecto;
+    document.querySelector("#imagen-web").src = articulo.imagen
+      ? articulo.imagen.trim()
+      : imagenPorDefecto;
+    document.querySelector("#imagen-webEN").src = articulo.imagenEN
+      ? articulo.imagenEN.trim()
+      : imagenPorDefecto;
   } catch (error) {
     console.error("Error al cargar el artículo:", error);
     document.querySelector("#titulo-web").textContent = "Error 404";
@@ -55,6 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       "Artículo no encontrado o servidor apagado.";
   }
 });
+
 const btnDarkMode = document.getElementById("toggle-dark-mode");
 btnDarkMode.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
