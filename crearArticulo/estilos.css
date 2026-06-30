@@ -38,6 +38,7 @@ body {
   margin: 0 0 12px 0;
   line-height: 1.2;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 #subtitulo-web,
 #subtitulo-webEN {
@@ -46,6 +47,7 @@ body {
   color: #475569;
   line-height: 1.5;
   margin: 0 0 16px 0;
+  text-align: center;
 }
 .meta-info,
 .meta-infoEN {
